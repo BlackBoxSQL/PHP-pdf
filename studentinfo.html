@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Register Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Student's Basic Information</h1><br>
+				<form method="POST" action="studentback.php" enctype="multipart/form-data">
+					<table>
+						<tr>
+							<td>Student ID :</td>
+							<td><input type="text" name="student_id" required></td>
+						</tr>
+						<tr>
+							<td>Student Name :</td>
+							<td><input type="text" name="student_name" required></td>
+						</tr>
+						<tr>
+							<td>Father's Name :</td>
+							<td><input type="text" name="student_fname" required></td>
+						</tr>
+						<tr>
+							<td>Mother's Name :</td>
+							<td><input type="text" name="student_mname" required></td>
+						</tr>
+						<tr>
+							<td>Gender :</td>
+							<td>
+								<input type="radio" name="gender" value="m" required>Male
+								<input type="radio" name="gender" value="f" required>Female
+							</td>
+						</tr>
+						<tr>
+							<td>Address :</td>
+							<td><input type="text" name="address" required></td>
+						</tr>
+						<tr>
+							<td>Phone no :</td>
+							<td><input type="phone" name="mobile" required></td>
+						</tr>
+						<tr>
+							<td>Email :</td>
+							<td><input type="email" name="email" required></td>
+						</tr> 
+						<tr>
+							<td>Class :</td>
+							<td><input type="text" name="class" required></td>
+						</tr>
+						<tr>
+							<td>Roll :</td>
+							<td><input type="text" name="roll" required></td>
+						</tr>
+						<tr>
+							<td>Section :</td>
+							<td><input type="text" name="section" required></td>
+						</tr>
+						<tr>
+							<td>Class teacher's Name :</td>
+							<td><input type="text" name="ctname" required></td>
+						</tr>
+						<tr>
+							<td>Result :</td>
+							<td><input type="text" name="result" required></td>
+						</tr>
+					</table><br>
+					<button class="btn btn-success" type="submit">Save</button>
+				</form><br><br>
+				<form method="GET" action="genpdf.php" enctype="multipart/form-data">
+					<button class="btn btn-danger" type="submit">Generate PDF</button>
+				</form>
+			</div>
+
+		</div>
+
+	</body>
+	</html>
